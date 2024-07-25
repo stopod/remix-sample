@@ -15,22 +15,22 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Primary: Story = {
   args: {
     children: "Button",
   },
 };
 
-export const Red: Story = {
+export const Secondary: Story = {
   args: {
     children: "Button",
-    className: "bg-red-500 hover:bg-red-600",
+    variant: "secondary",
   },
 };
 
-export const Small: Story = {
+export const Destructive: Story = {
   args: {
     children: "Button",
-    size: "sm",
+    variant: "destructive",
   },
 };
