@@ -34,3 +34,10 @@ export const Destructive: Story = {
     variant: "destructive",
   },
 };
+
+export const Sample: Story = {
+  args: {
+    children: "Button",
+    className: "bg-blue-500 hover:bg-blue-600 active:bg-blue-700",
+  },
+};
