@@ -41,19 +41,12 @@ const SearchForm = ({ className }: SearchFormProps) => {
   );
 };
 
-const FormSchema = z.object({
-  userId: z.string({
-    required_error: "Please select userId to display.",
-  }),
-});
-
 type Post = {
   userId: number;
   id: number;
   title: string;
   body: string;
 };
-
 export const loader = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=50");
   const data: Post[] = await response.json();
@@ -65,6 +58,12 @@ export default function Index() {
   const userIds = [...new Set(posts.map((post) => post.userId))];
 
   const [curPosts, setCurPosts] = React.useState<Post[]>(posts);
+
+  const FormSchema = z.object({
+    userId: z.string({
+      required_error: "Please select userId to display.",
+    }),
+  });
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -107,17 +106,17 @@ export default function Index() {
         {/* コンテンツ */}
         <div className="flex-grow mt-16 bg-yellow-100">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="w-60 ml-3 mt-1 mb-2 flex">
+            <form onSubmit={form.handleSubmit(onSubmit)} className="ml-3 mt-1 mb-3 flex">
               <FormField
                 control={form.control}
                 name="userId"
                 render={({ field }) => (
-                  <FormItem>
+                  <FormItem className="w-60">
                     <FormLabel>UserID</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={undefined}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a verified email to display" />
+                          <SelectValue placeholder="all" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
