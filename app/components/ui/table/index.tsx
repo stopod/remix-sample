@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { cn } from "~/lib/utils";
 
+// TODO: https://github.com/alan2207/bulletproof-react/blob/master/apps/react-vite/src/components/ui/table/table.tsx
 const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
     <div className="relative w-full overflow-auto">
