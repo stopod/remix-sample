@@ -15,8 +15,11 @@
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
+    "@hookform/resolvers": "^3.9.0",
     "@mui/material": "^5.16.4",
+    "@radix-ui/react-accordion": "^1.2.0",
     "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-select": "^2.1.1",
     "@radix-ui/react-slot": "^1.1.0",
     "@remix-run/node": "^2.10.3",
     "@remix-run/react": "^2.10.3",
@@ -27,8 +30,10 @@
     "lucide-react": "^0.414.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "^7.52.1",
     "tailwind-merge": "^2.4.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
