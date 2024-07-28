@@ -3,7 +3,7 @@ import { fn } from "@storybook/test";
 import { Button } from "./index";
 
 const meta = {
-  title: "shadcon-ui/Button",
+  title: "shadcn-ui/Button",
   component: Button,
   parameters: {
     layout: "centered",

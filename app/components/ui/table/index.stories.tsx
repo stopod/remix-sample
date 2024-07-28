@@ -1,15 +1,24 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "./index";
+import {
+  TableElement,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "./index";
 
 const meta = {
-  title: "shadcon-ui/Table",
-  component: Table,
+  title: "shadcn-ui/Table",
+  component: TableElement,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   args: {},
-} satisfies Meta<typeof Table>;
+} satisfies Meta<typeof TableElement>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -25,7 +34,7 @@ const posts = [
 
 export const Default: Story = {
   render: () => (
-    <Table>
+    <TableElement>
       <TableHeader>
         <TableRow>
           <TableHead>userId</TableHead>
@@ -44,13 +53,13 @@ export const Default: Story = {
           </TableRow>
         ))}
       </TableBody>
-    </Table>
+    </TableElement>
   ),
 };
 
 export const Sample: Story = {
   render: () => (
-    <Table>
+    <TableElement>
       <TableCaption>A list of your recent invoices.</TableCaption>
       <TableHeader>
         <TableRow>
@@ -69,6 +78,6 @@ export const Sample: Story = {
         </TableRow>
       </TableBody>
       <TableFooter>Footer</TableFooter>
-    </Table>
+    </TableElement>
   ),
 };

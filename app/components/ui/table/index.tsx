@@ -2,15 +2,14 @@ import * as React from "react";
 
 import { cn } from "~/lib/utils";
 
-// TODO: https://github.com/alan2207/bulletproof-react/blob/master/apps/react-vite/src/components/ui/table/table.tsx
-const Table = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
+const TableElement = React.forwardRef<HTMLTableElement, React.HTMLAttributes<HTMLTableElement>>(
   ({ className, ...props }, ref) => (
     <div className="relative w-full overflow-auto">
       <table ref={ref} className={cn("w-full caption-bottom text-sm", className)} {...props} />
     </div>
   )
 );
-Table.displayName = "Table";
+TableElement.displayName = "Table";
 
 const TableHeader = React.forwardRef<HTMLTableSectionElement, React.HTMLAttributes<HTMLTableSectionElement>>(
   ({ className, ...props }, ref) => <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
@@ -72,4 +71,4 @@ const TableCaption = React.forwardRef<HTMLTableCaptionElement, React.HTMLAttribu
 );
 TableCaption.displayName = "TableCaption";
 
-export { Table, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption };
+export { TableElement, TableHeader, TableBody, TableFooter, TableHead, TableRow, TableCell, TableCaption };

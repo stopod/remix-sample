@@ -4,7 +4,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "..
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
+import { TableElement, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../components/ui/table";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -138,7 +138,7 @@ export default function Index() {
             </form>
           </Form>
 
-          <Table>
+          <TableElement>
             <TableHeader className="bg-yellow-200">
               <TableRow>
                 <TableHead>userId</TableHead>
@@ -159,7 +159,7 @@ export default function Index() {
                 </TableRow>
               ))}
             </TableBody>
-          </Table>
+          </TableElement>
         </div>
       </div>
     </div>
