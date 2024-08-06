@@ -138,7 +138,7 @@ export default function Index() {
             </form>
           </Form>
 
-          <TableElement>
+          <TableElement className="bg-white">
             <TableHeader className="bg-yellow-200">
               <TableRow>
                 <TableHead>userId</TableHead>
