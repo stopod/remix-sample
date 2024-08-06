@@ -13,4 +13,7 @@ export default defineConfig({
     }),
     tsconfigPaths(),
   ],
+  optimizeDeps: {
+    include: ["@radix-ui/react-popover", "@radix-ui/react-slot", "cmdk"],
+  },
 });
